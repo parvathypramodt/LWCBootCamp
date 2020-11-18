@@ -1,0 +1,8 @@
+<apex:page standardController="Bear__c" extensions="GitHubIntgContr">
+    <p/>
+    <apex:form >
+        <!--apex:inputField value="{!account.name}"/--> 
+        <apex:commandButton value="callgit" action="{!callgit}"/>
+        <apex:outputText value="{!Greeting}" id="theValue"/><br/>
+    </apex:form>
+</apex:page>
