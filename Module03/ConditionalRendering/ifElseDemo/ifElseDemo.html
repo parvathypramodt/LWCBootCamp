@@ -1,0 +1,16 @@
+<!--
+  Ver   Date          Author                   Modification
+  1.0   19-Nov-2020   Pavathy                  Initial Version
+-->
+<template>
+    
+        <template if:true={showTom}>
+            <img src={imageoftom} alt="Tom Image" />
+            <lightning-button variant="brand" label="Show Jerry" onclick={switchImage} class="slds-m-left_x-small"></lightning-button>
+        </template>
+        <template if:false={showTom}>
+            <img src={imageofjerry} alt="Jerry Image" />
+            <lightning-button variant="brand" label="Show Tom" onclick={switchImage} class="slds-m-right_x-small"></lightning-button>
+        </template>
+
+</template>
