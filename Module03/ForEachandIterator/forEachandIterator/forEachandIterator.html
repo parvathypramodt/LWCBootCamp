@@ -1,22 +1,16 @@
 <template>
     <lightning-card>
-        <div >
+        <div class="slds-box slds-theme_default">
         <lightning-card title="For:Each Demo" >
-			<table class="slds-table slds-table_cell-buffer slds-table_bordered">	
-				<tr>
-                    <th>Index</th>
-    				<th>Id</th>
-					<th>Name</th>
-    				<th>Email</th>
-				</tr>			
-                <template if:true={mycolleages.length} for:each={mycolleages} for:item="con" for:index='index'>
-					<tr key={con.id}>
-                        <td>{index}</td>
-                        <td>{con.id}</td> 
-                        <td>{con.Name}</td>
-                        <td>{con.Email}</td> 
-                    </tr>     			
-                </template>
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered">	
+			<tr>
+                         <th>Index</th><th>Id</th><th>Name</th><th>Email</th>
+		        </tr>			
+                       <template if:true={mycolleages.length} for:each={mycolleages} for:item="con" for:index='index'>
+			<tr key={con.id}>
+                        <td>{index}</td> <td>{con.id}</td><td>{con.Name}</td><td>{con.Email}</td> 
+                        </tr>     			
+                      </template>
             </table>
         </lightning-card>
         </div>
@@ -24,8 +18,8 @@
             <lightning-card title="Iterator Demo" >
                 <div class="slds-m-around_medium">
                     <template iterator:con={mycolleages}>
-                        <div key={con.value.Id}>
-                            <div class="list-all">{con.value.Name} - {con.value.Email}</div>                 
+                        <div key={con.value.id}>              
+                            <p >{con.value.Name}- {con.value.Email}</p>
                         </div>
                     </template>
                 </div>
