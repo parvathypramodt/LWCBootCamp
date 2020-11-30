@@ -1,0 +1,13 @@
+<template>
+    <div class="slds-box">
+        <lightning-card title="Grand Parent" icon-name="custom:custom34">
+            <div class="slds-box" oncustomclick={handleCountSelectedChild}>
+                <div>
+                    <p>{countSelectedChild} of 3 Children selected</p>
+                    <lightning-button variant="brand" label="Reset All" onclick={handleResetAll}></lightning-button>
+                </div>       
+                <c-data-Parent></c-data-Parent>
+            </div>
+        </lightning-card>
+    </div>
+</template>

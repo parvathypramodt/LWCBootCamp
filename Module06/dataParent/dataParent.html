@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Parent" icon-name="custom:custom30">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <p class="slds-p-left_small">{childOneSelected}</p>
+                <c-data-Child num = "Child One" oncustomclick ={handleChild1Click}></c-data-Child>
+            </div>
+            <div class="slds-col">
+                <p class="slds-p-left_small slds-p-bottom_x-small">{childTwoSelected}</p>
+                <c-data-Child num = "Child Two" oncustomclick ={handleChild2Click}></c-data-Child>
+            </div>
+            <div class="slds-col">
+                <p class="slds-p-left_small slds-p-bottom_x-small">{childThreeSelected}</p>
+                <c-data-Child num = "Child Three" oncustomclick ={handleChild3Click}></c-data-Child>
+            </div>   
+        </div>
+    </lightning-card>
+  </template>
