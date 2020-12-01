@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Account Lookup - Contact List" icon-name="standard:person_account">
+        <div class="slds-m-around_medium slds-box_small">
+     
+                <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small"
+                    label="Search Account" value={searchKey}></lightning-input>
+                    
+        
+   
+                     <template if:true={searchKey}>                
+                        <template for:each={accounts.data} for:item="acct"> 
+                            <div key={acct.Id} >
+                               
+                                   
+                                        <lightning-button class="slds-button" onclick={getContactForAccounts} value={acct.Id} label={acct.Name} >
+                                        </lightning-button>
+                                  
+                                
+                             </div>
+
+                        </template>             
+                    </template>
+        </div>
+
+       <div>
+
+            <template if:true={showContact}>
+  
+                    <lightning-datatable key-field="Id" data={contacts.data} hide-checkbox-column columns={columns}>
+                    </lightning-datatable>
+                  
+            </template>
+            
+            <template if:false={showContact}>
+                No records found
+            </template>
+       </div>
+    </lightning-card>
+
+</template>
