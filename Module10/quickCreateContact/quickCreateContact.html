@@ -1,0 +1,24 @@
+<template>
+    <lightning-card>
+
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:contact" size="small"></lightning-icon>
+            &nbsp; Contact Quick Create
+        </h3>
+
+        <lightning-record-edit-form object-api-name="Contact" onsuccess={handleSuccess}>
+            
+            <div class="slds-m-around_medium">
+
+                <lightning-input-field field-name='Id' value={contactId}></lightning-input-field>
+                <lightning-output-field field-name='Name'></lightning-output-field>
+                <lightning-input-field field-name='Salutation'></lightning-input-field>
+                <lightning-input-field field-name='FirstName' onchange={setfirstName}></lightning-input-field>
+                <lightning-input-field field-name='LastName' onchange={setlastName}></lightning-input-field>
+                <lightning-button label="Create Contact" type="submit" onclick={handlePublish} variant="brand" ></lightning-button>
+                
+            </div>
+
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
